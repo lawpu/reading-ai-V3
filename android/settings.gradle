@@ -1,0 +1,3 @@
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+rootProject.name='trading_ai_app'
+include ':app'

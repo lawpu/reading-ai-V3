@@ -1,0 +1,4 @@
+import 'package:flutter/material.dart';
+class HomePage extends StatefulWidget{const HomePage({super.key});@override State<HomePage> createState()=>_HomePageState();}
+class _HomePageState extends State<HomePage>{double cash=100000;int holding=0;void buy(){setState((){cash-=4512;holding+=100;});}void sell(){if(holding>=100){setState((){cash+=4512;holding-=100;});}}
+@override Widget build(BuildContext c)=>Scaffold(appBar:AppBar(title:const Text('AI量化交易系统')),body:Center(child:Column(mainAxisAlignment:MainAxisAlignment.center,children:[Text('可用资金 ¥'+cash.toStringAsFixed(2)),Text('持仓 '+holding.toString()+'股'),ElevatedButton(onPressed:buy, child:const Text('买入100股')),ElevatedButton(onPressed:sell, child:const Text('卖出100股'))])));}
